@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="design.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/2e5e4b836f.js" crossorigin="anonymous"></script>
+        <script src="js/custom.js"></script>
     </head>
     <body>
         <header>
@@ -20,12 +21,12 @@
         <main>
             <section id="intro" class="hero">
                 <div class="hero-content">
-                    <div class="hero-text">
+                    <div class="hero-text"> 
                         <h1>David M</h1>
                         <h2>Junior developer</h2>
                         <p>I'm a student that is apassionated about of new technology hardware and software. The main languages that I use for programming are Python, CSS, HTML and GDscript</p>
                         <div class="socialmedias">
-                            <a href="a" target="_blank"><i class="fab fa-github"></i>Github</a>
+                            <a href="a" target="_blank"><i class="fab fa-github"></i></a>
                         </div>
                         
                     </div>
@@ -39,24 +40,30 @@
                 <h2 class="section-title">About me</h2>
             </section>
             <section id="projects" class="projects">
-                <h2>Personal Projects</h2>
-                <div class="project-container">
-                    <div class="project-card">
-                        <div class="project-images">
+                <h2 class="projects-title">Personal Projects</h2>
+                <div class="carousel-container">
+                    <button class="nav-arrow left">
+                        <img src="images/nxt_icon.png"/>
+                    </button>
+                    <div class="carousel-track">
+                        <div class="card" data-index="0">
                             <img src="images/personal_wordmark.png" alt="Wordmark">
                         </div>
-                        <div class="project-info">
-                            <h1>Personal Wordmark Activity</h1>
-                        </div>
-                    </div>
-                    <div class="stencil-portrait-project">
-                        <div class="project-images">
+                        <div class="card" data-index="1">
                             <img src="images/stencil_portrait.png" alt="stencil-portrait">
                         </div>
-                        <div class="project-info">
-                            <h1>Stencil Portrait</h1>
-                        </div>
                     </div>
+                    <button class="nav-arrow right">
+                        <img src="images/nxt_icon.png"/>
+                    </button>
+                </div>
+                <div class="projects-info">
+                    <h2 class="project-name">Personal Wordmark</h2>
+                </div>
+
+                <div class="dots">
+                    <div class="dot active" data-index="0"></div>
+                    <div class="dot active" data-index="1"></div>
                 </div>
             </section>
         </main>
