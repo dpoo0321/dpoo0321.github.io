@@ -1,12 +1,15 @@
 const projects = [
     {name: "Personal Wordmark"},
     {name: "Stencil_portrait"},
-];
+    {name: "Tesellation"},
+    {name: "Design Project"},
+    {name: "Tangram"},
+    ];
 const cards = document.querySelectorAll(".card");
 const dots = document.querySelectorAll(".dot");
-const ProjectName = document.querySelectorAll(".project-name");
-const leftArrow = document.querySelectorAll(".nav-arrow.left");
-const rightArrow = document.querySelectorAll(".nav-arrow.right");
+const ProjectName = document.querySelector(".project-name");
+const leftArrow = document.querySelector(".nav-arrow.left");
+const rightArrow = document.querySelector(".nav-arrow.right");
 
 let currentIndex = 0;
 let isAnimating = false;
@@ -16,13 +19,13 @@ function updateCarousel(newIndex){
     isAnimating = true;
 
     currentIndex = (newIndex + cards.length) % cards.length;
-    cards.forEach((cards, i) => {
+    cards.forEach((card, i) => {
         const offset = (i - currentIndex + cards.length) % cards.length;
         card.className = "card";
 
         if(offset === 0) card.classList.add("center");
         else if(offset === 1) card.classList.add("right-1");
-        else if(offset === 2) card.ClassList.add("right-2");
+        else if(offset === 2) card.classList.add("right-2");
         else if(offset === cards.length -1) card.classList.add("left-1");
         else if (offset === cards.length -2) card.classList.add("left-2");
         else card.classList.add("hidden");
@@ -38,7 +41,7 @@ function updateCarousel(newIndex){
 [leftArrow, rightArrow].forEach((arrow, idx) =>
     arrow.addEventListener("click", () => updateCarousel(currentIndex + (idx ? 1 : -1)))
     );
-dots.forEach((dot, i)=> dot.addEventListener("click", () => updateCarousel(i)));
+dots.forEach((dot, i) => dot.addEventListener("click", () => updateCarousel(i)));
 cards.forEach((card, i) => card.addEventListener("click", () => updateCarousel(i)));
 
 document.addEventListener("keydown", (e) =>{
