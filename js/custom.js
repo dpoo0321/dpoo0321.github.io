@@ -1,5 +1,5 @@
 const projects = [
-    {name: "Personal Wordmark"},
+    {name: "Personal Wordmark", desc: "Example 1"},
     {name: "Stencil_portrait"},
     {name: "Tesellation"},
     {name: "Design Project"},
@@ -8,6 +8,7 @@ const projects = [
 const cards = document.querySelectorAll(".card");
 const dots = document.querySelectorAll(".dot");
 const ProjectName = document.querySelector(".project-name");
+const ProjectDesc = document.querySelector(".project-desc")
 const leftArrow = document.querySelector(".nav-arrow.left");
 const rightArrow = document.querySelector(".nav-arrow.right");
 
