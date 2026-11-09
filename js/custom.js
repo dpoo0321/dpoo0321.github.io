@@ -1,9 +1,9 @@
 const projects = [
-    {name: "Personal Wordmark", desc: "Example 1"},
-    {name: "Stencil_portrait"},
-    {name: "Tesellation"},
-    {name: "Design Project"},
-    {name: "Tangram"},
+    {name: "Personal Wordmark", desc: "This was my first project in my design class and the purpose was create a wordmark, then make a design with the sketches. Honestly, it doesn't have an actual meaning. I just found it funny and that's all."},
+    {name: "Stencil portrait", desc: "A portrait of Tom Holland using a technique that consist in only showing the shadow's of the person that you want to draw. This was one of my favorite activities."},
+    {name: "Tesellation", desc: "A cardboard that has a shape of a drawing that follows a truchet pattern. I use a laser cutter to put that shape twice and make different shapes."},
+    {name: "Design Project", desc: "My personal design project. Here I'm working on the design of a idea for a videogame that is for a school project."},
+    {name: "Tangram", desc: "Just a Tangram that I designed with digital tools and then I printed with the laser cutter."},
     ];
 const cards = document.querySelectorAll(".card");
 const dots = document.querySelectorAll(".dot");
@@ -35,7 +35,8 @@ function updateCarousel(newIndex){
     ProjectName.style.opacity = "0";
     setTimeout(() =>{
         ProjectName.textContent = projects[currentIndex].name;
-        ProjectName.style.opacity = "1";
+        ProjectDesc.textContent = projects[currentIndex].desc;
+        ProjectName.style.opacity = ProjectDesc.style.opacity = "1";
     }, 300);
     setTimeout(() => (isAnimating = false), 800);
 }
